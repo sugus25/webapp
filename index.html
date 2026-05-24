@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <title>Wiseplay</title>
+    <!-- ชื่อเรื่องของหน้าเว็บ -->
+    <meta charset="UTF-8">
+    <!-- กำหนดชุดอักขระของหน้าเว็บให้เป็น UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, maximum-scale=10, user-scalable=yes">
+    <!-- กำหนดการแสดงผลของหน้าเว็บให้เหมาะสมกับอุปกรณ์ต่าง ๆ และอนุญาตให้ผู้ใช้งานปรับขนาดได้ -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- กำหนดให้เบราว์เซอร์ใช้โหมดการแสดงผลที่เข้ากันได้ -->
+    <style>
+        /* เริ่มต้นส่วนของ CSS สำหรับการกำหนดรูปแบบของหน้าเว็บ */
+        body {
+            background-color: #000;
+            /* กำหนดสีพื้นหลังเป็นสีดำ */
+            color: #fff;
+            /* กำหนดสีตัวอักษรเป็นสีขาว */
+            margin: 0;
+            /* ยกเลิกระยะขอบรอบนอกของหน้าเว็บ */
+            text-align: center;
+            /* จัดเรียงข้อความให้อยู่ตรงกลาง */
+            font-family: Arial, sans-serif;
+            /* กำหนดฟอนต์เป็น Arial และฟอนต์สำรองเป็น sans-serif */
+        }
+        img {
+            border-radius: 20px;
+            /* กำหนดมุมของรูปภาพให้โค้งมน */
+            border: 1px solid #87CEFA;
+            /* เพิ่มเส้นขอบรอบรูปภาพและกำหนดสีฟ้า */
+            padding: 2px;
+            /* เพิ่มระยะห่างระหว่างขอบและรูปภาพ */
+            margin: 3px;
+            /* กำหนดระยะห่างรอบรูปภาพ */
+            height: 80px;
+            /* กำหนดความสูงของรูปภาพ */
+            width: 80px;
+            /* กำหนดความกว้างของรูปภาพ */
+        }
+        .popup, .overlay, [style*="position: fixed"], [style*="position: absolute"] {
+            display: none !important;
+            /* ซ่อนองค์ประกอบที่มี position แบบ fixed หรือ absolute */
+        }
+    </style>
+
+    <script>
+        /* เริ่มต้นส่วนของ JavaScript */
+        window.onload = function () {
+            // เมื่อหน้าเว็บโหลดเสร็จสมบูรณ์ ให้เรียกใช้งานฟังก์ชันนี้
+            var adElements = document.querySelectorAll('[id*="ad"], [class*="ad"], [src*="ads"]');
+            // ค้นหาองค์ประกอบทั้งหมดที่มี id หรือ class ที่มีคำว่า "ad" หรือ src ที่มีคำว่า "ads"
+            adElements.forEach(function(element) {
+                // วนลูปเพื่อตั้งค่าการแสดงผลขององค์ประกอบที่พบ
+                element.style.display = 'none';
+                // ซ่อนองค์ประกอบที่เกี่ยวข้องกับโฆษณา
+            });
+        }
+    </script>
+</head>
+<body>
+        </head>
+    <body>
+    
+
+<!-- ลิงก์ที่สร้าง Intent สำหรับเปิดโปรแกรม Wiseplay เพื่อเล่นวิดีโอ -->
+<a href="intent://coolism-web.cdn.byteark.com/;stream/1#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://i1.sndcdn.com/avatars-t3aFJipUsgnY5jhX-CzKotQ-t1080x1080.jpg" 
+    alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">
+
+
+<!-- ลิงก์ที่สร้าง Intent สำหรับเปิดโปรแกรม Wiseplay เพื่อเล่นวิดีโอ -->
+<a href="intent://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/29/29.mpd#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0016.png" 
+    alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">
+             
+             
+<a href="intent://love.tivov68423.workers.dev/lx-origin/sd-moviehits_720/chunks.m3u8#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon///SamRujLok.png" 
+        alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">
+          
+<a href="intent://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/29/29.mpd#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0016.png" 
+        alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">
+          
+<a href="intent://love.pifipa2974.workers.dev/lx-origin/sd-expsci_720/chunks.m3u8#http://119.59.118.168/live/ch56/thailosonic2026/index.m3u8#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5yen2sI8GVV8RgeGUlhwl2Vg94sQiYSoAw3SQWTrSVZCW7y9IgNowNA&s=10" 
+        alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">
+          
+    <a href="intent://dl.dropbox.com/scl/fi/f6w8209nglwoqbc5ojhkh/server1-ducument-true-explore-sci.m3u8?rlkey=jx134ruo149spjk7qdatq9778&dl=1#http://119.59.118.168/live/ch56/thailosonic2026/index.m3u8#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5yen2sI8GVV8RgeGUlhwl2Vg94sQiYSoAw3SQWTrSVZCW7y9IgNowNA&s=10" 
+        alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">      
+          
+<a href="intent://119.59.118.168/live/ch57/irannahee/index.m3u8#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0013_R.png" 
+     alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">
+    
+          
+<a href="intent://github.com/cattv976/documentary/raw/refs/heads/main/trueexplorelife.m3u8#Intent;package=com.mxtech.videoplayer.ad;S.userAgent=exo_player;S.title=Live%20Program;S.referer=;scheme=https;type=video/mp4;end">
+
+  <!-- แท็ก <img> ใช้สำหรับแสดงภาพโลโก้ของช่อง -->
+  <img 
+    class="channel" 
+    src="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/0013_R.png" 
+    
+    
+    alt="" 
+    onerror="this.onerror=null; 
+             this.src='https://as2.ftcdn.net/jpg/03/53/54/91/1000_F_353549130_ahtWCQjjJzhzP8ocg1qR3s2E3Cz1VR3w.jpg';">
+    <!-- 
+        - class="channel": ตั้งค่าคลาส CSS สำหรับการจัดการสไตล์ของภาพ
+        - src="https://upload.wikimedia.org/wikipedia/commons/9/9d/NBT_Logo.png": ลิงก์ URL สำหรับแสดงโลโก้ของช่อง NBT
+        - alt="": กำหนดข้อความสำรอง (ปัจจุบันเว้นว่างไว้) หากไม่สามารถโหลดภาพได้
+        - onerror="...": ฟังก์ชัน JavaScript ที่จะถูกเรียกใช้เมื่อเกิดข้อผิดพลาดในการโหลดภาพ
+            - this.onerror=null: ยกเลิกการเรียกใช้ onerror ซ้ำหากเกิดข้อผิดพลาดอีกครั้ง
+            - this.src='...' : กำหนด URL สำรองเพื่อแสดงภาพอื่นแทน เมื่อไม่สามารถโหลดภาพต้นฉบับได้
+    -->
+</a>
+
+<!-- รายละเอียดภายใน href -->
+<!--
+1. intent://cdn-edge-ott.prd.go.th/live_vlc/smil:c30f-97f7-c767-ca64-98aa.smil/chunklist_w1579257356_b2128000.m3u8
+   - URL ของวิดีโอที่ต้องการเล่นผ่านแอปพลิเคชัน
+2. #Intent : กำหนดค่า Intent สำหรับเปิดโปรแกรมอื่น
+3. package=com.wiseplay : ระบุแอปพลิเคชัน Wiseplay ที่จะใช้เปิดลิงก์
+4. S.userAgent=exo_player : กำหนด User-Agent ที่ใช้ (ในที่นี้คือ exo_player)
+5. S.title=Live%20Program : ตั้งชื่อของวิดีโอว่า "Live Program" (เครื่องหมาย %20 แทนช่องว่าง)
+6. S.referer= : ไม่ได้ระบุ Referer
+7. scheme=https : ระบุโปรโตคอลที่ใช้ (ในกรณีนี้คือ HTTPS)
+8. type=video/mp4 : ระบุประเภทไฟล์เป็นวิดีโอ MP4
+9. end : ปิดการกำหนด Intent
+
+
+    รายละเอียดโค้ดส่วนที่ 3 ส่วนสุดท้าย
+
+        <!-- 
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    -->
+    <!-- 
+    ส่วนนี้เป็นการนำเข้า (include) ไฟล์ JavaScript ของ Video.js 
+    - Video.js เป็นไลบรารีโอเพ่นซอร์สที่ช่วยในการสร้างและจัดการวิดีโอเพลเยอร์แบบมืออาชีพ
+    - ไฟล์ `video.min.js` เป็นไฟล์ JavaScript ที่ถูกบีบอัด (minified) เพื่อลดขนาด ทำให้โหลดได้เร็วขึ้น
+    - URL ที่ใช้งานนี้ชี้ไปยัง CDN (Content Delivery Network) ของ Video.js ซึ่งช่วยให้ไฟล์ถูกโหลดจากเซิร์ฟเวอร์ที่ใกล้ผู้ใช้งานมากที่สุด
+    - ฟังก์ชันของ Video.js รวมถึงการควบคุมวิดีโอ (เล่น/หยุด/กรอ) การเพิ่มซับไตเติ้ล และการทำงานร่วมกับรูปแบบวิดีโอหลากหลาย
+    -->
+
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+    <!-- 
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+    -->
+    <!-- 
+    ส่วนนี้เป็นการนำเข้า (include) ไฟล์ CSS ของ Video.js
+    - ไฟล์ `video-js.css` ใช้สำหรับกำหนดลักษณะ (styles) และรูปลักษณ์ของวิดีโอเพลเยอร์ เช่น ขนาดปุ่ม สีพื้นหลัง ฯลฯ
+    - การใช้ `rel="stylesheet"` ระบุว่าไฟล์นี้เป็นไฟล์สไตล์ชีตสำหรับการออกแบบ
+    - URL นี้ชี้ไปยัง CDN ของ Video.js เช่นเดียวกัน ซึ่งช่วยให้ไฟล์ CSS ถูกโหลดเร็วขึ้น
+    - ไฟล์นี้สำคัญมาก หากไม่เรียกใช้งาน เพลเยอร์อาจไม่แสดงผลได้อย่างถูกต้อง
+    -->
+     
+     
+      <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel='stylesheet' href='https://unpkg.com/plyr@3/dist/plyr.css'><link rel="stylesheet" href="./style.css">
+  <title>IPTV MAS</title>
+  <!DOCTYPE html>
+<html lang="th">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>IPTV</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+<font color="white">
+   <p class="center-text">วันนี้</p>
+<script>
+<!-- START HIDE
+print1="";
+print2="";
+print3="";
+today = new Date();
+weekday = today.getDay();
+if (weekday == 6) print1='วันเสาร์';
+if (weekday == 0) print1='วันอาทิตย์';
+if (weekday == 1) print1='วันจันทร์';
+if (weekday == 2) print1='วันอังคาร';
+if (weekday == 3) print1='วันพุธ';
+if (weekday == 4) print1='วันพฤหัสบดี';
+if (weekday == 5) print1='วันศุกร์';
+month = today.getMonth();
+if (month == 0) print2='เดือนมกราคม';
+if (month == 1) print2='เดือนกุมภาพันธ์';
+if (month == 2) print2='เดือนมีนาคม';
+if (month == 3) print2='เดือนเมษายน';
+if (month == 4) print2='เดือนพฤษภาคม';
+if (month == 5) print2='เดือนมิถุนายน';
+if (month == 6) print2='เดือนกรกฎาคม';
+if (month == 7) print2='เดือนสิงหาคม';
+if (month == 8) print2='เดือนกันยายน';
+if (month == 9) print2='เดือนตุลาคม';
+if (month == 10) print2='เดือนพฤศจิกายน';
+if (month == 11) print2='เดือนธันวาคม';
+date = today.getDate();
+year=today.getYear();
+document.write (print1,'ที่ ',date, ' ', print2,' พศ. ',year+2443);
+// STOP HIDE --></script>
+
+
+<hr>
+</font>
+
+
+<font color="white">
+<p id="time"></p>
+<script>
+  const today = new Date();
+
+  // แสดงเวลา
+  document.getElementById("time").textContent = today.toLocaleTimeString();
+
+</script>
+  <body>
+  <style>
+ 
+     {
+    margin: 0;
+    padding: 0;
+    background: black;
+    height: 100%;
+    overflow: hidden;
+  }
+  video {
+    width: 100%;
+    height: 40%;
+    object-fit: cover; /* ครอบคลุมเต็มจอ */
+  }
+  
+         #videoContainer {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            background: black;
+        }
+        
+        video {
+            width: 850px;
+            height: auto;
+            display: none;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+        .button {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            background: #444;
+            color: red;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #555;
+        }
+  
+        
+    body {
+      background-color: #000;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2em;
+      color: #00aaff;
+    }
+
+    
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+      background-color: #222;
+      color: white;
+      border: 1px solid #00aaff;
+      border-radius: 5px;
+    }
+  </style>
+  
+     
+
+ <text color="white">
+    <input type="text" id="videoInput" placeholder="กรอก URL ของไฟล์ .m3u8 ทีนี่"/>
+            <button id="loadPlayer" title="Load Stream"></button>
+
+
+
+<script>
+// ฟังก์ชันสำหรับเข้าสู่/ออกจากเต็มจอ
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.getElementById('videoPlayer.requestFullscreen').requestFullscreen()
+      .then(() => {
+        isFullScreen = objectFit-contain;
+      });
+  } else {
+    document.exitFullscreen().then(() => {
+      isFullScreen = false;
+      // รีเซ็ตการซูมเมื่อออกจากเต็มจอ
+      scale = 1;
+      video.style.transform = `scale(${scale})`;
+    });
+  }
+}
+</script>
+    
+    <div class="controls">
+        <button class="button" id="stretch">Stretch</button>
+        <button class="button" id="crop">Crop</button>
+        <button class="button" id="zoom">Zoom</button>
+        <button class="button" id="fullscreen">Fullscreen</button>
+    </div>
+</div>
+          
+         
+          
+          
+
+  
+</head>
+<body>
+  <h1>IPTV MAS</h1>
+<select id="ช่องรายการ">
+    <option value="https://love.pifipa2974.workers.dev/lx-origin/streamx-samrujlok_480/chunks.m3u8">สำรวจโลก</option>
+    
+    <option value="https://love.sayob28681.workers.dev/lx-origin/streamx-samrujlok_720/chunks.m3u8">สำรวจโล</option>
+    
+    <option value="https://monomax-uiripn.cdn.byteark.com/plain/th/1080p/index.m3u8">โมโน29</option>
+    <option value="https://love.pifipa2974.workers.dev/lx-origin/sd-expsci_720/chunks.m3u8#http://119.59.118.168/live/ch56/thailosonic2026/index.m3u8">TRUE SCI</option>
+        <option value="https://dl.dropbox.com/scl/fi/f6w8209nglwoqbc5ojhkh/server1-ducument-true-explore-sci.m3u8?rlkey=jx134ruo149spjk7qdatq9778&dl=1">TRUE SCI</option>
+        
+       <option value="https://dl.dropbox.com/scl/fi/f6w8209nglwoqbc5ojhkh/server1-ducument-true-explore-sci.m3u8?rlkey=jx134ruo149spjk7qdatq9778&dl=1#http://119.59.118.168/live/ch56/thailosonic2026/index.m3u8">TRUE SCI</option> 
+        
+       <option value="https://love.tivov68423.workers.dev/lx-origin/sd-moviehits_720/chunks.m3u8">TRUE MOVIES HITS</option>
+       
+     <option value="https://github.com/zaxacaasada/logotv/raw/refs/heads/main/truemoviehits.m3u8">TRUE MOVIES HITS</option>
+       
+     <option value="http://45.144.166.242:1935/ThairathTV/t3_thairathtv/playlist.m3u8">ไทยรัฐ ทีวี</option>
+    <option value="https://ssai-streaming.thairath.co.th/bamm-csai/720p/index.m3u8">ไทยรัฐ</option>
+    <option value="https://lb1-live-mv.v2h-cdn.com/hls/ffad/vibomi/vibomi.m3u8">Amarin</option>
+     <option value="https://load1.v2h-cdn.com/RE_freetv/7HD.stream_720p/playlist.m3u8">CH7 ทีวี</option>
+    <option value="https://load1.v2h-cdn.com/digitaltv/ch3/playlist.m3u8">3HD</option>
+    <option value="https://load1.v2h-cdn.com/RE_freetv/NEW.stream_720p/playlist.m3u8">JKN18</option>
+</select>
+
+<div class="container"></div>
+<video controls crossorigin playsinline poster="https://bitdash-a.akamaihd.net/content/sintel/poster.png" id="video"></video>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('#video');
+    const selector = document.getElementById('ช่องรายการ');
+    const player = new Plyr(video, { captions: { active: true, update: true, language: 'th' } });
+
+    function playChannel(url) {
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(url);
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = url;
+        } else {
+            alert('Tu navegador no soporta reproducción HLS.');
+        }
+        video.play(); // เริ่มเล่นวิดีโอเมื่อเลือกช่องรายการ
+    }
+
+    // เริ่มเล่นช่องรายการแรกทันทีเมื่อโหลดหน้า
+    playChannel(selector.value);
+    
+    // เปลี่ยนช่องรายการเมื่อมีการเลือก
+    selector.addEventListener('change', (event) => {
+        playChannel(event.target.value);
+    });
+});
+</script>
+  
+    <script>
+    const videoPlayer = document.getElementById('video');
+    const loadVideoBtn = document.getElementById('loadPlayer');
+    const videoInput = document.getElementById('videoInput');
+    const fullscreenBtn = document.getElementById('fullscreen');
+    
+    loadPlayer.addEventListener('click', () => {
+        const videoURL = videoInput.value;
+        if (videoURL) {
+            videoPlayer.src = videoURL; 
+            videoPlayer.play(); 
+        } else {
+            alert('กรุณากรอก URL ของวีดีโอ');
+        }
+    }
+    )
+    
+    fullscreenBtn.addEventListener('click', () => {
+        if (videoPlayer.requestFullscreen) {
+            videoPlayer.requestFullscreen();
+        } else if (videoPlayer.webkitRequestFullscreen) {
+            videoPlayer.webkitRequestFullscreen();
+        } else if (videoPlayer.msRequestFullscreen) {
+            videoPlayer.msRequestFullscreen();
+        }
+    });
+
+    const stretchBtn = document.getElementById('stretch');
+    const cropBtn = document.getElementById('crop');
+    const zoomBtn = document.getElementById('zoom');
+    
+    stretchBtn.addEventListener('click', () => {
+        videoPlayer.style.objectFit = 'fill'; // Stretch
+    });
+
+    cropBtn.addEventListener('click', () => {
+        videoPlayer.style.objectFit = 'cover'; // Crop
+    });
+
+    zoomBtn.addEventListener('click', () => {
+        if (videoPlayer.style.objectFit === 'none') {
+            videoPlayer.style.objectFit = 'contain'; // Zoom
+        } else {
+            videoPlayer.style.objectFit = 'none'; // Reset
+        }
+    });
+
+
+let isFullScreen = false;
+let initialDistance = null;
+let scale = 1;
+
+// ฟังก์ชันสำหรับเข้าสู่/ออกจากเต็มจอ
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.getElementById('videoPlayer.requestFullscreen').requestFullscreen()
+      .then(() => {
+        isFullScreen = objectFit-contain;
+      });
+  } else {
+    document.exitFullscreen().then(() => {
+      isFullScreen = false;
+      // รีเซ็ตการซูมเมื่อออกจากเต็มจอ
+      scale = 1;
+      video.style.transform = `scale(${scale})`;
+    });
+  }
+}
+
+// เชื่อมต่อ Event สำหรับ Touch
+video.addEventListener('touchstart', handleTouchStart, {passive: false});
+video.addEventListener('touchmove', handleTouchMove, {passive: false});
+video.addEventListener('touchend', handleTouchEnd);
+
+let lastDistance = 0;
+
+function getDistance(touches) {
+  const [touch1, touch2] = touches;
+  const dx = touch2.clientX - touch1.clientX;
+  const dy = touch2.clientY - touch1.clientY;
+  return Math.hypot(dx, dy);
+}
+
+function handleTouchStart(e) {
+  if (e.touches.length === 2) {
+    // เริ่มต้นจับการซูม
+    initialDistance = getDistance(e.touches);
+    lastDistance = initialDistance;
+  }
+}
+
+function handleTouchMove(e) {
+  if (e.touches.length === 2) {
+    e.preventDefault(); // ป้องกันการเลื่อนหน้า
+    const currentDistance = getDistance(e.touches);
+    const delta = currentDistance - lastDistance;
+    lastDistance = currentDistance;
+
+    // คำนวณ scale จาก delta
+    const zoomFactor = 0.005; // ปรับความเร็วซูมได้ตามต้องการ
+    scale += delta * zoomFactor;
+
+    // จำกัด scale ให้อยู่ในช่วงที่ต้องการ
+    if (scale < 0.5) scale = 0.5;
+    if (scale > 3) scale = 3;
+
+    // ปรับ scale ของวิดีโอ
+    video.style.transform = `scale(${scale})`;
+  }
+}
+
+function handleTouchEnd(e) {
+  if (e.touches.length < 2) {
+    initialDistance = null;
+  }
+}
+</script>
+
+<script src="https://cdn.rawgit.com/video-dev/hls.js/18bb552/dist/hls.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/polyfill/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
+<script src='https://unpkg.com/plyr@3'></script><script  src="./script.js"></script
+     
+     
+     
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+</body>
+</html>
+
+
