@@ -1,12 +1,5 @@
 #EXTM3U
 
-# Ausawin CH.2026
-# =======================================================
-# Playlist Name: Ausawin CH.2026
-# Last Update: 2026-08-2
-# =======================================================
-
-
 #EXTINF:-1 tvg-id="" tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/R_0148.png"group-title="iPTVplus", HBO
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://aisplay.ais.th/
